@@ -1,0 +1,423 @@
+:root {
+  --bg: #f6f1e8;
+  --surface: #fffdf9;
+  --text: #171717;
+  --muted: #67625a;
+  --line: #ddd3c5;
+  --accent: #8a6a42;
+  --accent-dark: #6f5435;
+  --footer: #efe7db;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  --radius: 24px;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(92%, var(--max-width));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(246, 241, 232, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+}
+
+.hero,
+.page-hero {
+  padding: 5.5rem 0 4rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.08;
+  margin-top: 0;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  margin-bottom: 1rem;
+  max-width: 10ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.lead {
+  font-size: 1.06rem;
+  max-width: 58ch;
+  color: var(--muted);
+}
+
+.narrow-text {
+  max-width: 42rem;
+}
+
+.muted-text {
+  color: var(--muted);
+}
+
+.hero-buttons,
+.artist-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.95rem 1.45rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  background: var(--text);
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background: #000000;
+}
+
+.btn-light {
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.btn-light:hover {
+  background: #f8f3ec;
+}
+
+.btn-instagram {
+  background: linear-gradient(135deg, #833ab4, #c13584, #e1306c, #f77737);
+  color: #ffffff;
+}
+
+.btn-instagram:hover {
+  filter: brightness(1.05);
+}
+
+.hero-card,
+.info-card,
+.artist-card,
+.contact-info,
+.contact-form {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: 2rem;
+}
+
+.card-label {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.featured-list {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.featured-list li {
+  margin-bottom: 0.55rem;
+}
+
+.overview-section,
+.preview-section,
+.artist-section,
+.contact-section {
+  padding: 0 0 5rem;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.overview-grid,
+.artist-cards,
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.overview-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info-card {
+  padding: 1.7rem;
+}
+
+.small-number {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.artist-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.artist-card {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.artist-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.artist-card-content {
+  padding: 1.35rem;
+}
+
+.artist-section .container {
+  display: grid;
+  gap: 4rem;
+}
+
+.artist-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.reverse-layout .artist-image {
+  order: 2;
+}
+
+.reverse-layout .artist-copy {
+  order: 1;
+}
+
+.artist-image {
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.artist-image img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.artist-image:hover img {
+  transform: scale(1.04);
+}
+
+.artist-copy p {
+  color: var(--muted);
+}
+
+.contact-grid {
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: start;
+}
+
+.contact-info,
+.contact-form {
+  padding: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  font: inherit;
+  background: #fffefa;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(138, 106, 66, 0.18);
+  border-color: var(--accent);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--footer);
+}
+
+.footer-inner {
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 960px) {
+  .hero-grid,
+  .overview-grid,
+  .artist-cards,
+  .artist-profile,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse-layout .artist-image,
+  .reverse-layout .artist-copy {
+    order: initial;
+  }
+
+  h1 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+
+  .hero,
+  .page-hero {
+    padding: 4rem 0 2.75rem;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-card,
+  .info-card,
+  .contact-info,
+  .contact-form {
+    padding: 1.4rem;
+  }
+}

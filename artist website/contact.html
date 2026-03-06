@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <meta name="description" content="Contact page for the art collector client project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Artists to Watch</a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="artists.html">Featured Painters</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <p class="eyebrow">Contact</p>
+        <h1>Get in Touch</h1>
+        <p class="lead narrow-text">
+          Use this page to connect, ask about the featured painters, or continue the conversation around collecting.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <article class="contact-info">
+          <h2>About This Project</h2>
+          <p>
+            This website was created as a client project centered around painters my client is currently interested in buying and following.
+          </p>
+          <p>
+            You can later replace this with your cousin's real background, collector statement, email, or Instagram.
+          </p>
+          <p>
+            The purpose of the site is to combine strong visuals with a clean, modern presentation of artists worth watching.
+          </p>
+        </article>
+
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button type="submit" class="btn btn-dark">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Client project website • Contemporary art focus</p>
+    </div>
+  </footer>
+</body>
+</html>
